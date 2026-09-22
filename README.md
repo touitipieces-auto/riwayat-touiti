@@ -1,12 +1,10 @@
-# روايات التويتي — Android UI v1
+# روايات التويتي — نسخة الشعار الجديدة
 
-هذه أول واجهة حقيقية للتطبيق مبنية بـ Flutter.
+هذه النسخة تضيف شعار روايات التويتي الجديد داخل الواجهة الرئيسية للتطبيق.
 
-## التشغيل
-1. ثبّت Flutter على جهازك.
-2. افتح هذا المجلد في Android Studio أو VS Code.
-3. نفّذ `flutter pub get`.
-4. نفّذ `flutter run`.
-
-## ملاحظة
-هذه النسخة هي واجهة البداية فقط. المحتوى الحالي تجريبي، وسنضيف قاعدة البيانات والكتب المرخّصة لاحقاً.
+## البناء على Codemagic
+- Build platform: Android
+- Format: APK
+- Mode: Debug
+- Post-clone script:
+  `flutter create --platforms=android .`

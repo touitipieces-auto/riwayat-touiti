@@ -66,14 +66,29 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _topBar() => Padding(
-    padding: const EdgeInsets.fromLTRB(20, 18, 20, 12),
+    padding: const EdgeInsets.fromLTRB(20, 14, 20, 12),
     child: Row(
       children: [
-        const Text(
-          'روايات التويتي',
-          style: TextStyle(fontSize: 23, fontWeight: FontWeight.w800, color: Color(0xFFE6B04A)),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: Image.asset(
+            'assets/logo.png',
+            width: 58,
+            height: 58,
+            fit: BoxFit.cover,
+          ),
         ),
-        const Spacer(),
+        const SizedBox(width: 12),
+        const Expanded(
+          child: Text(
+            'روايات التويتي',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w800,
+              color: Color(0xFFE6B04A),
+            ),
+          ),
+        ),
         _roundIcon(Icons.search_rounded),
         const SizedBox(width: 8),
         _roundIcon(Icons.notifications_none_rounded),
